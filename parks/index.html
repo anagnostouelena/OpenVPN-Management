@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Park Management</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Park Information</h2>
+
+        <div class="table-content">
+            <table id="table-data">
+                <thead>
+                    <tr>
+                        <th>Park Name</th>
+                        <th>Park Location</th>
+                        <th>Ilektronomos</th>
+                        <th>Cameras</th>
+                        <th>Logger</th>
+                        <th>VPN Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+   
+            </table>
+        </div>
+    
+        <button style="width: 30%; margin-left: 35%;" class="button" onclick="popModal()" >ADD A NEW PARK </button>
+
+    </div>
+
+    <div id="loading-circle"></div>
+    <div class="modal" id="addmodal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn" onclick="closeModal()">&times;</span>
+            
+            <div class="fields">
+                <h4>Park Name</h2>
+                <input id="parkName" type="text" placeholder="Enter name" >
+                
+                <h4>Park Location</h2>
+                <input id="parkLocation" type="text" placeholder="Enter location">
+
+                <h4>Ilektronomos</h2>
+                <input id="ilektronomosLink" type="text" placeholder="Enter ilektronomos link">
+
+                <h4>Cameras</h2>
+                <input id="camerasLink" type="text" placeholder="Enter cameras link">
+
+                <h4>Logger</h2>
+                <input id="loggerLink" type="text" placeholder="Enter logger link">
+
+                
+                <button id="add" class="button" style="margin-top: 0px;" onclick="sendData()">ADD</button>
+
+            </div>
+      
+        </div>
+    </div>
+    <script src="getparkdata.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
