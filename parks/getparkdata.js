@@ -1,4 +1,6 @@
-let url = "http://home/elena/parks/getInfo.php";
+const ip = myApp.ip; 
+
+const url = ip + "parks/getInfo.php";
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url, true);
@@ -22,7 +24,8 @@ function createButtonClickHandler(button,  ilektronomosCell, camerasCell, logger
         button.disabled = true;
 
         if (park.on === 0) {
-            let url = `http://home/elena/parks/connect.php?name=${park.cn}`;
+           
+         const url = ip + "/parks/connect.php?name=${park.cn}`;
 
             var xhr = new XMLHttpRequest();
             xhr.open("GET", url, true);
@@ -64,7 +67,8 @@ function createButtonClickHandler(button,  ilektronomosCell, camerasCell, logger
 
         } else {
 
-            let url = `http://home/elena/kill.php?name=${park.cn}`;
+            
+         const url = ip + "/kill.php?name=${park.cn}`;
 
             var xhr = new XMLHttpRequest();
             xhr.open("GET", url, true);
