@@ -1,4 +1,4 @@
-console.log(url);
+const ip = myApp.ip; 
 var jsonData = {};
 function sendData() {
     var parkName = document.getElementById('parkName').value;
@@ -27,7 +27,7 @@ function sendData() {
         document.getElementById('camerasLink').disabled = true;
         document.getElementById('loggerLink').disabled = true;
 
-        let url = "http://home/elena/parks/postData.php";
+         const url = ip + "/parks/postData.php";
 
         var xhr = new XMLHttpRequest();
        
@@ -64,7 +64,8 @@ function sendData() {
 }
 
 function getData() {
-    let url = "http://home/elena/parks/getInfo.php";
+   
+    const url = ip + "/parks/getInfo.php";
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
